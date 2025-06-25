@@ -21,14 +21,16 @@
     h1, h2, h3 {
       color: #38bdf8;
     }
-    a.button {
+    a.button, button[type="submit"] {
       display: inline-block;
       padding: 0.75rem 1.5rem;
       background-color: #38bdf8;
       color: #0f172a;
       text-decoration: none;
+      border: none;
       border-radius: 0.5rem;
       font-weight: 600;
+      cursor: pointer;
     }
     .section {
       margin-top: 3rem;
@@ -50,6 +52,21 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: none;
+      border-radius: 0.375rem;
+      font-family: 'Inter', sans-serif;
+    }
+    form textarea {
+      resize: vertical;
     }
   </style>
 </head>
@@ -87,16 +104,9 @@
       </div>
     </div>
 
-   <!-- <div class="section">
-      <h2>Client Feedback</h2>
-      <p><em>“In our first 30 days, we cut CPA by 28% and increased ROAS by 1.7x.”</em><br />
-      — Test Client, Shopify Brand</p>
-    </div>
--->
     <div class="section">
       <h2>Meet the Founder</h2>
       <div class="bio">
-        <!-- <img src="https://via.placeholder.com/80" alt="Founder Photo" /> -->
         <div>
           <p>Hi, I’m Alexy Lamoureux. I’m a mechanical engineer and machine learning enthusiast who got tired of watching businesses burn money on lazy ad strategies. NeuralLiftSolutions is my way of bringing smart, structured, scalable ad performance to brands ready to grow.</p>
         </div>
@@ -105,11 +115,32 @@
 
     <div class="section" id="contact">
       <h2>Book Your Free Audit</h2>
-      <p>Let’s talk about your brand’s growth potential. Book a free strategy call below:</p>
+      <p>Let’s talk about your brand’s growth potential. Book a free strategy call or send a message below:</p>
       <div class="cta">
-        <a href="#" class="button">Schedule a Call</a>
+        <a href="https://calendly.com/alexy-lamoureux-neuralliftsolutions/30min" class="button" target="_blank">Schedule a Call</a>
+      </div>
+
+      <div class="section">
+        <h3>Or send us a message:</h3>
+        <form action="https://formspree.io/f/mwpbwnjd" method="POST">
+          <label>
+            Your Name:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Your Email:
+            <input type="email" name="_replyto" required />
+          </label>
+          <label>
+            Message:
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <br />
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
 </body>
 </html>
+
